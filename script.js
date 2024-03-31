@@ -48,7 +48,7 @@ function stopAlarm() {
     document.getElementById('stopBtn').disabled = true;
     document.getElementById('time').textContent = '05:00';
     timeLeft = 5 * 60;
-    if (alarmCount < 5){
+    if (alarmCount < 6){
         document.getElementById('startBtn').disabled = false;
     }
 }
