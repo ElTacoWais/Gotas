@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gotas</title>
+    <link rel="manifest" href="manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                    console.log('Service Worker registrado con éxito:', registration);
+                }, function(err) {
+                    console.log('Registro de Service Worker fallido:', err);
+                });
+            });
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="time">05:00</h1>
+        <div class="btnIni">
+            <button id="startBtn" onclick="startTimer()">Iniciar</button>
+        </div>
+        <div class="btnStp">
+            <button id="stopBtn" disabled onclick="stopAlarm()">Detener Alarma</button>
+        </div>
+        <h2 id="alarmCount">Veces que se ha tomado las gotas: <span id="alarmCount" class="alarm-number">1</span></h2>
+        <button id="resetBtn" disabled onclick="stopAlarm();resetAlarmCount()">Completar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
