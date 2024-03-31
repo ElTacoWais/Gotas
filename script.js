@@ -23,7 +23,7 @@ function startTimer() {
             document.getElementById('alarmCount').innerHTML = `Veces que se ha tomado las gotas: <span class="alarm-number">${alarmCount}</span>`;
             document.querySelector('.alarm-number').classList.add('alarm-number');
 
-            if (alarmCount === 5) {
+            if (alarmCount === 6) {
                 document.getElementById('resetBtn').disabled = false;
                 document.getElementById('startBtn').disabled = true;
             }
