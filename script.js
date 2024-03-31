@@ -1,3 +1,10 @@
+//service worker
+if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('./sw.js')
+    .then(reg => console.log('Registro de SW exitoso',reg))
+    .catch(err => console.warn('Error al registrar SW',err))
+}
+
 let timeLeft = 5 * 60;
 let alarmCount = 1;
 let audio;
