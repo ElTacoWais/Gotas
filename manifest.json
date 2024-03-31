@@ -2,7 +2,7 @@
     "name": "Gotas",
     "short_name": "Gotas",
     "description": "Contador de 5 minutos con alarma",
-    "start_url": "https://eltacowais.github.io/Gotas/",
+    "start_url": "/Gotas/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#0084ff",
